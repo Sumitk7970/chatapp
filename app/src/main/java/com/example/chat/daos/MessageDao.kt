@@ -5,6 +5,7 @@ import com.example.chat.utils.FirebaseConstants
 import com.example.chat.models.Message
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -13,6 +14,7 @@ class MessageDao {
     private val db = FirebaseFirestore.getInstance()
     private val messagesCollection = db.collection(FirebaseConstants.CHATS)
 
+    @DelicateCoroutinesApi
     fun sendMessage(senderId: String, receiverId: String, chatRoom: String, message: Message) {
         GlobalScope.launch(Dispatchers.IO) {
             messagesCollection.document(chatRoom).get().addOnCompleteListener {
@@ -49,12 +51,6 @@ class MessageDao {
         return messagesCollection.document(chatRoom).collection(FirebaseConstants.TEXT_MESSAGES)
             .orderBy("sendTime", Query.Direction.DESCENDING)
     }
-
-    fun getChats(uid: String): Query {
-        return messagesCollection.whereArrayContains("members", uid)
-            .orderBy("sendTime", Query.Direction.DESCENDING)
-    }
-
     /**
      * Generate a unique chat room id from senderId and receiverId
      */

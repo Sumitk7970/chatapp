@@ -15,7 +15,9 @@ import com.example.chat.models.User
 import com.example.chat.utils.WrapContentLinearLayoutManager
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.firestore.Query
+import kotlinx.coroutines.DelicateCoroutinesApi
 
+@DelicateCoroutinesApi
 class UsersFragment : Fragment(), UserAdapter.UserClickListener {
     private lateinit var binding: FragmentPeopleBinding
 

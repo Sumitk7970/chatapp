@@ -12,7 +12,9 @@ import com.example.chat.utils.WrapContentLinearLayoutManager
 import com.example.chat.utils.toast
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.coroutines.DelicateCoroutinesApi
 
+@DelicateCoroutinesApi
 class MessageActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMessageBinding
     private lateinit var adapter: MessageAdapter
