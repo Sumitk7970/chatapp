@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_2dp">2dp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="profile_image_size">50dp</dimen>
+    <dimen name="send_btn_size">35dp</dimen>
+    <dimen name="message_field_corner_radius">8dp</dimen>
+    <dimen name="_8dp">8dp</dimen>
+    <dimen name="margin_2dp">2dp</dimen>
+    <dimen name="message_corner_radius">8dp</dimen>
+</resources>

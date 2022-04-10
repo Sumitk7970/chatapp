@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="Profile"
+        android:key="profile"/>
+
+    <ListPreference android:title="Theme"
+        android:key="theme"
+        android:summary="Dark theme"
+        android:entries="@array/theme_entries"
+        android:entryValues="@array/theme_entries_values"
+        android:defaultValue="dark"
+        android:dialogTitle="Choose theme" />
+
+    <Preference android:title="Sign out"
+        android:key="sign_out"/>
+</androidx.preference.PreferenceScreen>

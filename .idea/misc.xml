@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/bottom_nav_item_color.xml" value="0.2885" />
+        <entry key="app/src/main/res/drawable/edittext_background.xml" value="0.2885" />
+        <entry key="app/src/main/res/drawable/ic_send.xml" value="0.2885" />
+        <entry key="app/src/main/res/drawable/message_activity_background.xml" value="0.2885" />
+        <entry key="app/src/main/res/drawable/message_receive_background.xml" value="0.2885" />
+        <entry key="app/src/main/res/drawable/message_sent_background.xml" value="0.2885" />
+        <entry key="app/src/main/res/drawable/profile_photo_background.xml" value="0.2885" />
+        <entry key="app/src/main/res/drawable/profile_photo_default.xml" value="0.2885" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.35733695652173914" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.35733695652173914" />
+        <entry key="app/src/main/res/layout/activity_message.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_account.xml" value="0.3734375" />
+        <entry key="app/src/main/res/layout/fragment_chats.xml" value="0.35733695652173914" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.35733695652173914" />
+        <entry key="app/src/main/res/layout/fragment_people.xml" value="0.3734375" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.3734375" />
+        <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_chat.xml" value="0.3734375" />
+        <entry key="app/src/main/res/layout/item_users.xml" value="0.3734375" />
+        <entry key="app/src/main/res/layout/message_recieve.xml" value="0.3734375" />
+        <entry key="app/src/main/res/layout/message_send.xml" value="0.3734375" />
+        <entry key="app/src/main/res/layout/message_sent.xml" value="0.3734375" />
+        <entry key="app/src/main/res/menu/main_activity_menu.xml" value="0.3734375" />
+        <entry key="app/src/main/res/menu/main_activity_navigation_menu.xml" value="0.3734375" />
+        <entry key="app/src/main/res/menu/message_activity_menu.xml" value="2.5607142857142855" />
+        <entry key="app/src/main/res/xml/settings_preference.xml" value="0.3734375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

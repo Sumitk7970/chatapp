@@ -1,0 +1,23 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<resources>
+  <color name="primaryColor">#374955</color>
+  <color name="primaryDarkColor">#091E28</color>
+  <color name="primaryTextColor">#374955</color>
+  <color name="primaryTextColorDark">#ffffff</color>
+  <color name="secondaryTextColor">#000000</color>
+
+  <color name="accent">#ff0099cc</color>
+  
+  <color name="gray_light">#424242</color>
+
+  <color name="white">#ffffff</color>
+  <color name="black">#1b1b1b</color>
+
+  <color name="message_activity_background">#091E28</color>
+  <color name="main_activity_background">#091E28</color>
+  <color name="bottom_nav_background">#374955</color>
+  <color name="edittext_background">#374955</color>
+  <color name="edittext_background2">#374955</color>
+  <color name="users_name_color">#E6FFFFFF</color>
+  <color name="profile_photo_background">#374955</color>
+</resources>

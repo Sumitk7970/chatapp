@@ -1,0 +1,32 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<resources>
+<!--  <color name="primaryColor">#5c27fe</color>-->
+<!--  <color name="primaryLightColor">#9a5aff</color>-->
+<!--  <color name="primaryDarkColor">#0000c9</color>-->
+<!--  <color name="secondaryColor">#c165dd</color>-->
+<!--  <color name="secondaryLightColor">#f696ff</color>-->
+<!--  <color name="secondaryDarkColor">#8e35ab</color>-->
+<!--  <color name="primaryTextColor">#ffffff</color>-->
+<!--  <color name="secondaryTextColor">#000000</color>-->
+
+  <color name="primaryColor">#ff0099cc</color>
+  <color name="primaryDarkColor">#ff0099cc</color>
+  <color name="primaryTextColor">#374955</color>
+  <color name="primaryTextColorDark">#091E28</color>
+  <color name="secondaryTextColor">#fff</color>
+
+  <color name="accent">#ff0099cc</color>
+  
+  <color name="gray_light">#cfd8dc</color>
+
+  <color name="white">#ffffff</color>
+  <color name="black">#212121</color>
+
+  <color name="message_activity_background">#B5CAD7</color>
+  <color name="main_activity_background">#fff</color>
+  <color name="bottom_nav_background">#fff</color>
+  <color name="edittext_background">#fff</color>
+  <color name="edittext_background2">#cfd8dc</color>
+  <color name="users_name_color">#E6091E28</color>
+  <color name="profile_photo_background">#B5CAD7</color>
+</resources>
