@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable/bottom_nav_item_color.xml" value="0.2885" />
         <entry key="app/src/main/res/drawable/edittext_background.xml" value="0.2885" />
+        <entry key="app/src/main/res/drawable/ic_add_photo.xml" value="0.274" />
         <entry key="app/src/main/res/drawable/ic_send.xml" value="0.2885" />
         <entry key="app/src/main/res/drawable/message_activity_background.xml" value="0.2885" />
         <entry key="app/src/main/res/drawable/message_receive_background.xml" value="0.2885" />
@@ -14,12 +15,17 @@
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.35733695652173914" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.35733695652173914" />
         <entry key="app/src/main/res/layout/activity_message.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_user_selection.xml" value="0.35260416666666666" />
         <entry key="app/src/main/res/layout/fragment_account.xml" value="0.3734375" />
         <entry key="app/src/main/res/layout/fragment_chats.xml" value="0.35733695652173914" />
+        <entry key="app/src/main/res/layout/fragment_create_group.xml" value="0.3692708333333333" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.35733695652173914" />
         <entry key="app/src/main/res/layout/fragment_people.xml" value="0.3734375" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.3734375" />
         <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_user_selection.xml" value="0.3692708333333333" />
+        <entry key="app/src/main/res/layout/group_message_receive.xml" value="0.4" />
+        <entry key="app/src/main/res/layout/group_message_sent.xml" value="0.3692708333333333" />
         <entry key="app/src/main/res/layout/item_chat.xml" value="0.3734375" />
         <entry key="app/src/main/res/layout/item_users.xml" value="0.3734375" />
         <entry key="app/src/main/res/layout/message_recieve.xml" value="0.3734375" />

@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.chat.R
 import com.example.chat.databinding.ItemUsersBinding
-import com.example.chat.models.User
+import com.example.chat.data.entity.User
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 
@@ -26,8 +26,8 @@ class UserAdapter(options: FirestoreRecyclerOptions<User>,
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int, model: User) {
         holder.binding.apply {
-            nameText.text = model.displayName
-            statusText.text = model.status
+            tvName.text = model.displayName
+            tvStatus.text = model.status
         }
         holder.itemView.setOnClickListener {
             userClickListener.onUserClick(model)

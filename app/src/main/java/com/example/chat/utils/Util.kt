@@ -1,14 +1,31 @@
 package com.example.chat.utils
 
 import android.content.Context
-import android.os.Build
 import android.text.format.DateUtils
+import android.util.Patterns
 import android.widget.Toast
-import androidx.annotation.RequiresApi
-import java.time.Instant
-import java.time.LocalDateTime
-import java.time.ZoneId
-import java.time.format.DateTimeFormatter
+import com.example.chat.R
+import java.text.SimpleDateFormat
+import java.util.*
+
+/**
+ * Checks whether name and email are valid or not and shows toast accordingly
+ */
+fun isValidEmailAndPassword(context: Context, email: String, password: String) = when {
+    email.isEmpty() -> {
+        context.toast(R.string.enter_your_email)
+        false
+    }
+    !Patterns.EMAIL_ADDRESS.matcher(email).matches() -> {
+        context.toast(R.string.email_not_valid)
+        false
+    }
+    password.isEmpty() -> {
+        context.toast(R.string.enter_your_password)
+        false
+    }
+    else -> true
+}
 
 /**
  * Extension function for showing a toast from a string
@@ -24,15 +41,16 @@ fun Context.toast(textId: Int, duration:Int = Toast.LENGTH_SHORT) {
     Toast.makeText(this, getString(textId), duration).show()
 }
 
-@RequiresApi(Build.VERSION_CODES.O)
-fun convertTimeInMillisToDate(timeInMillis: Long): String {
-    val instant = Instant.ofEpochMilli(1575959745000L)
-    // Adding the timezone information to be able to format it (change accordingly)
-    val date = LocalDateTime.ofInstant(instant, ZoneId.systemDefault())
-
-    return if (DateUtils.isToday(timeInMillis)) {
-        DateTimeFormatter.ofPattern("h:mm a").format(date).toString()
+/**
+ * @return the date in string format
+ */
+fun Long.toDate(): String {
+    val date = Date(this)
+    return  if (DateUtils.isToday(this)) {
+        val sdf = SimpleDateFormat("h:mm a", Locale.getDefault())
+        sdf.format(date)
     } else {
-        DateTimeFormatter.ofPattern("dd/MM/yy").format(date).toString()
+        val sdf = SimpleDateFormat("dd/MM/yy", Locale.getDefault())
+        sdf.format(date)
     }
 }

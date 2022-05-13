@@ -5,12 +5,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.chat.R
-import com.example.chat.databinding.MessageRecieveBinding
+import com.example.chat.data.entity.Message
+import com.example.chat.data.entity.User
+import com.example.chat.data.remote.UserDatabase
+import com.example.chat.databinding.GroupMessageReceiveBinding
 import com.example.chat.databinding.MessageSentBinding
-import com.example.chat.models.Message
+import com.example.chat.utils.toDate
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 const val SENT_MESSAGE = 1
 const val RECEIVE_MESSAGE = 2
@@ -22,7 +28,7 @@ class MessageAdapter(options: FirestoreRecyclerOptions<Message>):
     }
 
     class ReceiveMessageViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        val binding = MessageRecieveBinding.bind(itemView)
+        val binding = GroupMessageReceiveBinding.bind(itemView)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -33,7 +39,7 @@ class MessageAdapter(options: FirestoreRecyclerOptions<Message>):
             SentMessageViewHolder(view)
         } else {
             val view = LayoutInflater.from(parent.context).inflate(
-                R.layout.message_recieve, parent, false
+                R.layout.group_message_receive, parent, false
             )
             ReceiveMessageViewHolder(view)
         }
@@ -50,10 +56,23 @@ class MessageAdapter(options: FirestoreRecyclerOptions<Message>):
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int, model: Message) {
         if(holder.javaClass == SentMessageViewHolder::class.java) {
             val sentViewHolder = holder as SentMessageViewHolder
-            sentViewHolder.binding.message.text = model.message
+            sentViewHolder.binding.apply {
+                message.text = model.message
+            }
         } else {
             val receiveViewHolder = holder as ReceiveMessageViewHolder
-            receiveViewHolder.binding.message.text = model.message
+            receiveViewHolder.binding.apply {
+                tvMessage.text = model.message
+                tvSendTime.text = model.sendTime.toDate()
+                CoroutineScope(Dispatchers.IO).launch {
+                    UserDatabase().getUserById(model.senderId).addOnSuccessListener {
+                        it?.let {
+                            val user = it.toObject(User::class.java)
+                            tvSenderName.text = user?.displayName
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.SignUpFragment">
+    tools:context=".ui.fragments.SignUpFragment">
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -38,7 +38,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/nameField"
-                android:backgroundTint="@color/edittext_background2"
+                android:backgroundTint="@color/edittext_background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -61,7 +61,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/emailField"
-                android:backgroundTint="@color/edittext_background2"
+                android:backgroundTint="@color/edittext_background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -85,7 +85,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/passwordField"
-                android:backgroundTint="@color/edittext_background2"
+                android:backgroundTint="@color/edittext_background"
                 android:inputType="textPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />

@@ -1,4 +1,4 @@
-package com.example.chat.activities
+package com.example.chat.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

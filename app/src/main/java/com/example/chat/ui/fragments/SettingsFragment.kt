@@ -1,4 +1,4 @@
-package com.example.chat.fragments
+package com.example.chat.ui.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,7 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
 import com.example.chat.R
-import com.example.chat.activities.LoginActivity
+import com.example.chat.ui.activities.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class SettingsFragment : PreferenceFragmentCompat() {

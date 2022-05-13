@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/chatsFragment"
-        android:name="com.example.chat.fragments.ChatsFragment"
+        android:name="com.example.chat.ui.fragments.ChatsFragment"
         android:label="Chats"
         tools:layout="@layout/fragment_chats" />
     <fragment
         android:id="@+id/peopleFragment"
-        android:name="com.example.chat.fragments.UsersFragment"
+        android:name="com.example.chat.ui.fragments.UsersFragment"
         android:label="People"
         tools:layout="@layout/fragment_people" />
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.example.chat.fragments.SettingsFragment"
+        android:name="com.example.chat.ui.fragments.SettingsFragment"
         android:label="Settings"
         tools:layout="@layout/fragment_settings" />
 </navigation>

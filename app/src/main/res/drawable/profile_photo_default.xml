@@ -2,7 +2,7 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="rectangle"/>
-        <color android:color="@color/profile_photo_background"/>
+<!--        <color android:color="@color/profile_photo_background"/>-->
         <bitmap android:src="@drawable/ic_person"/>
     </item>
 </selector>

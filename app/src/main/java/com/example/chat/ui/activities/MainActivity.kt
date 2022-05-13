@@ -1,11 +1,11 @@
-package com.example.chat.activities
+package com.example.chat.ui.activities
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.app.AppCompatDelegate.*
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
+        setContentView(binding.root)
 
         val navHostFragment = supportFragmentManager
             .findFragmentById(binding.fragmentContainerView.id) as NavHostFragment
@@ -61,8 +61,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun changeTheme() {
-        if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_NO)
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-        else AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        if(getDefaultNightMode() == MODE_NIGHT_NO)
+            setDefaultNightMode(MODE_NIGHT_YES)
+        else setDefaultNightMode(MODE_NIGHT_NO)
     }
 }

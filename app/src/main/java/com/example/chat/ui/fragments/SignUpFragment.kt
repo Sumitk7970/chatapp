@@ -1,4 +1,4 @@
-package com.example.chat.fragments
+package com.example.chat.ui.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,10 +9,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.chat.R
-import com.example.chat.activities.MainActivity
-import com.example.chat.daos.UserDao
+import com.example.chat.ui.activities.MainActivity
+import com.example.chat.data.remote.UserDatabase
 import com.example.chat.databinding.FragmentSignUpBinding
-import com.example.chat.models.User
+import com.example.chat.data.entity.User
 import com.example.chat.utils.toast
 import com.google.firebase.auth.FirebaseAuth
 
@@ -61,8 +61,8 @@ class SignUpFragment : Fragment() {
                 if(it.isSuccessful) {
                     val firebaseUser = mAuth.currentUser!!
                     val user = User(firebaseUser.uid, name, email, null)
-                    val userDao = UserDao()
-                    userDao.addUser(user)
+                    val userDatabase = UserDatabase()
+                    userDatabase.addUser(user)
                     updateUI()
                 } else {
                     context?.toast(it.exception?.message
